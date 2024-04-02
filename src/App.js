@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import buildBioCards from './components/bioCard';
 import BioData from './assets/bioData.json';
+import { Snackbar, Alert } from '@mui/material';
 
 function App() {
   const [biographies, setBiographies] = useState(BioData);
@@ -12,6 +13,10 @@ function App() {
   const [filterOccupation, setFilterOccupation] = useState('');
   const [filterGender, setFilterGender] = useState('');
   const [sortOrder, setSortOrder] = useState(''); 
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarSeverity, setSnackbarSeverity] = useState('success');
+
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -25,16 +30,31 @@ function App() {
     setFilterGender(event.target.value);
   };
 
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
+
   const toggleFavoriteBiography = (bio) => {
     setFavoriteBiographies(prev => {
       const isFavorite = prev.some(item => item.id === bio.id);
       if (isFavorite) {
-        return prev.filter(item => item.id !== bio.id);
+        setSnackbarMessage(`${bio.name} has been removed from favorites.`);
+        setSnackbarSeverity('warning');
       } else {
-        return [...prev, bio];
+        setSnackbarMessage(`${bio.name} has been added to favorites.`);
+        setSnackbarSeverity('success');
       }
+
+      setSnackbarOpen(true);
+      return isFavorite
+        ? prev.filter(item => item.id !== bio.id)
+        : [...prev, bio];
     });
   };
+  
 
   useEffect(() => {
     setFavBioTotal(favoriteBiographies.length);
@@ -65,6 +85,11 @@ function App() {
   return (
     <div className='App'>
       <Header />
+      <Snackbar className = 'alert' open={snackbarOpen} autoHideDuration={6000} onClose={handleSnackbarClose}>
+        <Alert onClose={handleSnackbarClose} severity={snackbarSeverity} sx={{ width: '100%' }}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
       <h4>{filteredBiographies.length} Biographies</h4>
       <div>
         <input
@@ -86,7 +111,7 @@ function App() {
         </select>
         <button className = "sort" onClick={() => setSortOrder('name')}>Sort by Name</button>
         <button className = "sort" onClick={() => setSortOrder('age')}>Sort by Age</button>
-        <button className = "sort" onClick={resetFilters}>Reset Filters</button>
+        <button className = "reset" onClick={resetFilters}>Reset Filters</button>
       </div>
       {filteredBiographies.length === 0 ? (
         <p>No biographies found</p>

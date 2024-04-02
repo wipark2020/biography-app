@@ -8,8 +8,11 @@
 }
 
 .bioCard img {
-    width: 200px;
+    width: 240px; 
+    margin-left: -20px; 
+    margin-top: -20px; 
     border-radius: 5px;
+    display: block; 
 }
 
 .bioCard h3 {
