@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Lebron James",
+        "image": "./images/lebron.jpeg",
+        "occupation": "Athlete",
+        "age": 39,
+        "gender": "Male"
+    }, 
+    {
+        "id": 2,
+        "name": "Michael Jordan",
+        "image": "./images/jordan.jpeg",
+        "occupation": "Athlete",
+        "age": 61,
+        "gender": "Male"
+    },
+    {
+        "id": 3,
+        "name": "Serena Williams",
+        "image": "./images/serena.jpg",
+        "occupation": "Athlete", 
+        "age": 42,
+        "gender": "Female"
+    },
+    {
+        "id": 4,
+        "name": "Stephen Curry",
+        "image": "./images/curry.jpg",
+        "occupation": "Athlete",
+        "age": 36,
+        "gender": "Male"
+    },
+    {
+        "id": 5,
+        "name": "Novak Djokovic",
+        "image": "./images/djokovic.jpeg",
+        "occupation": "Athlete",
+        "age": 37,
+        "gender": "Male"
+    },
+    {
+        "id": 6,
+        "name": "Cristiano Ronaldo",
+        "image": "./images/ronaldo.jpeg",
+        "occupation": "Athlete",
+        "age": 39,
+        "gender": "Male"
+    },
+    {
+        "id": 7,
+        "name": "Lionel Messi",
+        "image": "./images/messi.jpg",
+        "occupation": "Athlete",
+        "age": 36,
+        "gender": "Male"
+    },
+    {
+        "id": 8,
+        "name": "Tom Brady",
+        "image": "./images/brady.jpg",
+        "occupation": "Athlete",
+        "age": 46,
+        "gender": "Male"
+    },
+    {
+        "id": 9,
+        "name": "Patrick Mahomes",
+        "image": "./images/mahomes.jpeg",
+        "occupation": "Athlete",
+        "age": 28,
+        "gender": "Male"
+    },
+    {
+        "id": 10,
+        "name": "Taylor Swift",
+        "image": "./images/swift.jpeg",
+        "occupation": "Musician",
+        "age": 34,
+        "gender": "Female"
+    },
+    {
+        "id": 11,
+        "name": "Ariana Grande",
+        "image": "./images/grande.jpg",
+        "occupation": "Musician",
+        "age": 30,
+        "gender": "Female"
+    },
+    {
+        "id": 12,
+        "name": "Kobe Bryant",
+        "image": "./images/kobe.jpg",
+        "occupation": "Athlete",
+        "age": 41,
+        "gender": "Male"
+    },
+    {
+        "id": 13,
+        "name": "Kanye West",
+        "image": "./images/kanye.jpg",
+        "occupation": "Musician",
+        "age": 46,
+        "gender": "Male"
+    },
+    {
+        "id": 14,
+        "name": "Sadie Sink",
+        "image": "./images/sadie.jpeg",
+        "occupation": "Actor",
+        "age": 21,
+        "gender": "Female"
+    }
+]

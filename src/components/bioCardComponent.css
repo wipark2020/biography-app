@@ -1,0 +1,32 @@
+.bioCard {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.bioCard img {
+    width: 200px;
+    border-radius: 5px;
+}
+
+.bioCard h3 {
+    font-size: 15px;
+    margin: 10px 0;
+    color: #626868;
+}
+
+.bioCard .favButton {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.bioCard .favButtonClicked {
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    color: red;
+}
